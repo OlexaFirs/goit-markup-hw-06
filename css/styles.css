@@ -61,13 +61,6 @@ body {
     padding-bottom: 94px;
 }
 
-.container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
 /* header */
 .header-logo {
@@ -207,18 +200,21 @@ body {
     text-transform: uppercase;
 }
 
-.main-btn {
+.main-btn, .subscribe-form-btn  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-color: transparent;
+    border-width: 0px;
     cursor: pointer;
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.06em;
     line-height: 1.88;
-    font-size: 16px;
     min-width: 200px;
     padding: 10px 32px;
     transition-property: background-color; 
@@ -226,8 +222,10 @@ body {
     transition-timing-function: var(--timing-function);
 }
 
-.main-btn:hover,
-.main-btn:focus {
+.main-btn:hover, 
+.main-btn:focus,
+.subscribe-form-btn:hover,
+.subscribe-form-btn:focus {
     background-color: var(--hover-main-btn);
 }
 
@@ -616,7 +614,7 @@ body {
     min-width: 206px;
 }
 
-.appeal{
+.appeal, .subscribe-form-label{
     margin-bottom: 20px;
     text-transform: uppercase;
     color: var(--primary-white-color);
@@ -701,7 +699,6 @@ body {
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: var(--timing-function);
-
 }
 
 .close-button {
@@ -723,3 +720,41 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* subscribe footer */
+.subscribe {
+    margin-left: auto;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form-input-raw {
+    display: flex;
+}
+
+.subscribe-form-svg {
+    margin-left: 10px;
+}
+
+.subscribe-form-input {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    margin-right: 12px;
+    min-width: 358px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: inherit;
+    color: var(--primary-white-color);
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.subscribe-form-input:focus {
+    border: 1px solid var(--primary-white-color);
+    outline-width: 0px;
+}
