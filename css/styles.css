@@ -701,7 +701,7 @@ body {
     transition-timing-function: var(--timing-function);
 }
 
-.close-button {
+.close-btn {
     position: absolute;
     right: 8px;
     top: 8px;
